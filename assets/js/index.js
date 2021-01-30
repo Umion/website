@@ -1,12 +1,12 @@
 	$(document).ready(function(){
 
 			
-		let preloader = document.querySelector('.preloader');
-
-		window.addEventListener('load', () => {
-		    preloader.classList.add('hide');
-		    setTimeout(()=> {preloader.remove()}, 500)
-		})
+		let preloader = document.querySelector('.preloader')
+		setTimeout(function(){
+			if(!preloader.classList.contains('hide')) {
+				preloader.classList.add('hide')
+			}
+		},1000)
     
 
 
