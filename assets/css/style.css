@@ -1034,6 +1034,7 @@ section {
 	position: absolute;
 	right: 0;
 	top: -50px;
+	pointer-events: none;
 }
 section.testimonials {
 	height: 1000px;
