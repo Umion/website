@@ -1,5 +1,6 @@
 include pug/_head
-body
+body(style="background: #121212")
+  //- .preloader
   header 
     .container
       .nav 
@@ -41,18 +42,18 @@ body
           .layout__top
             .main__title
               h2
-                | < 
+                span.light= "< "
                 span full
-                |  > 
+                span.light= " >" 
               h2.white development  
               h2
                 span cycle 
-                | / 
+                span.light / 
           .layout__footer
             .scroll.hidden
                 img.scroll__icon(src=require("./images/mouse.svg"), alt="mouse")
                 .scroll__label scroll down
-            p.main__label-sm for your web product |
+            p.main__label-sm for your web product
             button.button.main__action
               span Contact us
               svg(viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")

@@ -126,6 +126,25 @@ main > section {
   }
 }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.5s;
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 #services,
 #reviews {
   background-color: $black400;
@@ -391,36 +410,47 @@ header {
   top: 0;
   padding-top: 20px;
   width: 100%;
-  z-index: 99999;
+  z-index: 999;
+
+  &::before {
+    @media screen and (max-width: $size-md) {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(17px);
+    }
+  }
 
   @media screen and (max-width: $size-md) {
     padding-top: 4px;
-    background: $black100;
   }
 
   // visual helper for development
-  &:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "fullhd";
+  // &:before {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   content: "fullhd";
 
-    @media screen and (max-width: $size-xxl) {
-      content: "$size-xxl";
-    }
-    @media screen and (max-width: $size-xl) {
-      content: "$size-xl";
-    }
-    @media screen and (max-width: $size-lg) {
-      content: "$size-lg";
-    }
-    @media screen and (max-width: $size-md) {
-      content: "$size-md";
-    }
-    @media screen and (max-width: $size-sm) {
-      content: "$size-sm";
-    }
-  }
+  //   @media screen and (max-width: $size-xxl) {
+  //     content: "$size-xxl";
+  //   }
+  //   @media screen and (max-width: $size-xl) {
+  //     content: "$size-xl";
+  //   }
+  //   @media screen and (max-width: $size-lg) {
+  //     content: "$size-lg";
+  //   }
+  //   @media screen and (max-width: $size-md) {
+  //     content: "$size-md";
+  //   }
+  //   @media screen and (max-width: $size-sm) {
+  //     content: "$size-sm";
+  //   }
+  // }
 }
 
 .nav {
@@ -438,19 +468,19 @@ header {
   }
 
   &__links {
-    transition: left 0.3s;
+    transition: right 0.4s ease-in;
 
     @media screen and (max-width: $size-md) {
       position: fixed;
-      left: -120%;
+      right: -120%;
       top: 0;
       width: 100%;
       height: 100vh;
-      background: $grey600;
+      backdrop-filter: blur(17px);
     }
 
     &.active {
-      left: 0;
+      right: 0;
     }
 
     &-wrap {
@@ -488,6 +518,10 @@ header {
       line-height: 24px;
       color: $white;
       padding: 12px 16px;
+    }
+
+    &:hover {
+      color: $primary;
     }
 
     & a.active {
@@ -572,7 +606,7 @@ header {
   left: 50px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 99999;
+  z-index: 999;
 
   @media screen and (max-width: $size-xxl) {
     left: 40px;
@@ -594,12 +628,11 @@ header {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     border: 2px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: 0.4s;
 
     &:before {
@@ -659,7 +692,6 @@ header {
     width: 100%;
 
     & h2 {
-      color: $primary;
       font-size: 110px;
       line-height: 120px;
 
@@ -689,6 +721,10 @@ header {
 
       & span {
         color: $grey400;
+
+        &.light {
+          color: $primary;
+        }
       }
     }
   }
@@ -705,10 +741,24 @@ header {
   }
 
   &__label-sm {
+    position: relative;
+    padding-right: 10px;
+
     @media screen and (max-width: $size-md) {
       position: absolute;
       right: 0;
       top: -55px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: $white;
+      animation: 0.45s infinite alternate blinker;
     }
   }
 
@@ -769,6 +819,14 @@ header {
   }
 }
 
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 // ***** MAIN END *****
 
 // ***** SERVICES START *****

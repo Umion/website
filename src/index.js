@@ -1,57 +1,49 @@
 import "./index.pug";
 import "./index.scss";
 
-// import "./scripts/pureFullPage.min.css";
-// import "./scripts/pureFullPage.min.js";
+import { debounce, throttle, scrollTo } from "./scripts/helpers";
 
-const easeOutCubic = (t) => --t * t * t + 1;
-const scrollTo = (el, duration = 600, offset = 0) => {
-  const yPos = el.offsetTop;
-  const startY = window.scrollY;
-  const difference = yPos - startY;
-  const startTime = performance.now();
+const body = document.body;
+const hamburger = document.querySelector(".nav__hamburger");
+const mobNav = document.querySelector(".nav__links");
+const btnNav = document.querySelector(".nav__action");
+const links = document.querySelectorAll(".link_to");
+const sidebarDots = document.querySelectorAll(".sidebar__dot");
+const sections = document.querySelectorAll("section");
 
-  if (yPos === startY + offset) {
-    return Promise.resolve(true);
-  }
+let isMobile;
 
-  return new Promise((resolve) => {
-    const step = () => {
-      const progress = (performance.now() - startTime) / duration;
-      const amount = easeOutCubic(progress);
-      window.scrollTo({ top: startY + amount * difference - offset });
-      if (progress < 0.99) {
-        window.requestAnimationFrame(step);
-      } else {
-        resolve(true);
-      }
-    };
-    step();
-  });
-};
+// const preloader = document.querySelector(".preloader");
+
+// window.addEventListener("load", () => {
+//   preloader.classList.add("hide");
+//   setTimeout(() => {
+//     preloader.remove();
+//   }, 500);
+// });
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  const body = document.body;
-  const hamburger = document.querySelector(".nav__hamburger");
-  const mobNav = document.querySelector(".nav__links");
-  const btnNav = document.querySelector(".nav__action");
+  isMobile = window.innerWidth < 848;
 
-  const links = document.querySelectorAll(".link_to");
-  const sidebarDots = document.querySelectorAll(".sidebar__dot");
-  const sections = document.querySelectorAll("section");
+  function checkSize() {
+    if (isMobile) {
+      document.removeEventListener("scroll", scrollListener);
+      document.addEventListener("scroll", mobScrollListener);
+    } else {
+      document.removeEventListener("scroll", mobScrollListener);
+      document.addEventListener("scroll", scrollListener);
+    }
+  }
+  window.addEventListener("resize", checkSize);
+  checkSize();
 
   const darkBtnSections = ["main", "reviews"];
-  const sectionsIds = [
-    "main",
-    "services",
-    "instruments",
-    "reviews",
-    "about",
-    "contacts",
-  ];
-  let activeSection = "main";
   let isScrollLocked = false;
-  let lockScroll = false;
+  let debounceTime = 250;
+  let throttleTime = 200;
+
+  const sectionPos = {};
+  const sectionName = {};
 
   try {
     links.forEach((l) => {
@@ -73,13 +65,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
           isScrollLocked = true;
 
-          scrollTo(section).then((d) => {
+          const offset = isMobile ? 40 : 0;
+          scrollTo(section, offset).then((d) => {
             isScrollLocked = false;
           });
 
           darkBtnSections.includes(id)
             ? btnNav.classList.remove("light")
             : btnNav.classList.add("light");
+        }
+        if (isMobile) {
+          hamburger.classList.remove("active");
+          mobNav.classList.remove("active");
+          body.classList.remove("overflow");
         }
       });
     });
@@ -93,67 +91,72 @@ document.addEventListener("DOMContentLoaded", function (event) {
     body.classList.toggle("overflow");
   });
 
-  // document.addEventListener("scroll", (event) => {
-  //   if (lockScroll) return;
-  //   lockScroll = true;
+  try {
+    setTimeout(() => {
+      sections.forEach((section) => {
+        sectionPos[section.id] = section.offsetTop;
+        sectionName[section.id] = section.id;
+      });
+    }, 1000);
+  } catch (error) {
+    console.log(error);
+  }
 
-  //   let currentScroll =
-  //     document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
+  function scrollListener() {
+    debounce(() => {
+      const targetYCoordinate = window.innerHeight / 2;
+      const sectionEl = Array.from(sections).find((el) => {
+        const rect = el.getBoundingClientRect();
 
-  //   if (currentScroll > 0 && lastScroll <= currentScroll) {
-  //     lastScroll = currentScroll;
-  //     console.log("down");
-  //     scrollTo(document.getElementById("contacts"));
-  //   } else {
-  //     lastScroll = currentScroll;
-  //     console.log("up");
-  //   }
-  // });
+        return (
+          targetYCoordinate >= rect.y &&
+          targetYCoordinate <= rect.y + rect.height
+        );
+      });
 
-  // document.addEventListener("wheel", checkScrollDirection);
+      if (sectionEl) {
+        sectionEl.scrollIntoView({
+          behavior: "smooth",
+        });
 
-  // function checkScrollDirection(event) {
-  //   console.log("1");
-  //   if (lockScroll) return;
-  //   lockScroll = true;
-  //   let prev = sectionsIds[sectionsIds.indexOf(activeSection) - 1];
-  //   let next = sectionsIds[sectionsIds.indexOf(activeSection) + 1];
-  //   console.log(prev, next);
-  //   if (checkScrollDirectionIsUp(event)) {
-  //     console.log("UP");
-  //     if (!prev) {
-  //       lockScroll = false;
-  //       return;
-  //     } else {
-  //       activeSection = prev;
-  //       scrollTo(document.getElementById(prev)).then((d) => {
-  //         console.log("then");
-  //         setTimeout(() => {
-  //           lockScroll = false;
-  //         }, 600);
-  //       });
-  //     }
-  //   } else {
-  //     if (!next) {
-  //       lockScroll = false;
-  //       return;
-  //     } else {
-  //       console.log("Down");
-  //       activeSection = next;
-  //       scrollTo(document.getElementById(next)).then((d) => {
-  //         console.log("then");
-  //         setTimeout(() => {
-  //           lockScroll = false;
-  //         }, 600);
-  //       });
-  //     }
-  //   }
-  // }
+        sidebarDots.forEach((dot) => {
+          dot.classList.remove("active");
+          if (sectionEl.id === dot.dataset.id) {
+            dot.classList.add("active");
+          }
+        });
+        links.forEach((l) => {
+          l.classList.remove("active");
+          if (sectionEl.id === l.dataset.href) {
+            l.classList.add("active");
+          }
+        });
+        darkBtnSections.includes(sectionEl.id)
+          ? btnNav.classList.remove("light")
+          : btnNav.classList.add("light");
+      }
+    }, debounceTime);
+  }
+  function mobScrollListener() {
+    throttle(() => {
+      console.log("asd");
+      var scrollPos =
+        document.documentElement.scrollTop || document.body.scrollTop;
 
-  // function checkScrollDirectionIsUp(event) {
-  //   if (event.wheelDelta) {
-  //     return event.wheelDelta > 0;
-  //   }
-  //   return event.deltaY < 0;
-  // }
+      let active;
+      for (let id in sectionPos) {
+        if (sectionPos[id] <= scrollPos + 62) {
+          active = sectionName[id];
+        }
+      }
+      if (active) {
+        links.forEach((l) => {
+          l.classList.remove("active");
+          if (active === l.dataset.href) {
+            l.classList.add("active");
+          }
+        });
+      }
+    }, throttleTime);
+  }
 });
