@@ -1,23 +1,28 @@
 include pug/_head
-body(style="background: #121212")
+body
   //- .preloader
   header 
     .container
-      .nav 
-        a.nav__logo.link_to(data-href="main")
+      .nav
+        a.nav__logo.link_to(data-id="main")
           img(src=require("./images/logo.svg"), alt="logo")
         .nav__links
-          .nav__links-wrap.container
-            .nav__link
-              a.link_to(data-href="services") services
-            .nav__link
-              a.link_to(data-href="instruments") instruments
-            .nav__link
-              a.link_to(data-href="reviews") reviews
-            .nav__link
-              a.link_to(data-href="about") about
-            .nav__link
-              a.link_to(data-href="contacts") contacts
+          ul.nav__links-wrap.container
+            li.nav__link
+              a.link_to(data-id="services")
+                span services
+            li.nav__link
+              a.link_to(data-id="instruments")
+                span instruments
+            li.nav__link
+              a.link_to(data-id="reviews")
+                span reviews
+            li.nav__link
+              a.link_to(data-id="about")
+                span about
+            li.nav__link
+              a.link_to(data-id="contacts")
+                span contacts
         .nav__hamburger
           span
           span
@@ -37,6 +42,9 @@ body(style="background: #121212")
     .sidebar__dot(data-id="contacts")
   main
     section#main.main.relative
+      .background
+        img.background__item(src=require("./images/main_img.jpg"), alt="developer")
+        img.main__highlight(src=require("./images/highlight.svg"), alt="lines")
       .container.h-100
         .layout
           .layout__top
@@ -52,22 +60,23 @@ body(style="background: #121212")
           .layout__footer
             .scroll.hidden
                 img.scroll__icon(src=require("./images/mouse.svg"), alt="mouse")
-                .scroll__label scroll down
+                .scroll__label.link_to(data-id="contacts") scroll down
             p.main__label-sm for your web product
             button.button.main__action
               span Contact us
               svg(viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
                 path(d="M12.6666 3.6665L3.33329 12.9998" stroke="#ffffff" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
                 path(d="M12.6666 10.5132V3.6665H5.81996" stroke="#ffffff" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+            img.main__highlight-sm(src=require("./images/highlight.svg"), alt="lines")
         img.main__block(src=require("./images/main_img.jpg"), alt="developer")
-        .scroll.main__scroll
+        .scroll.main__scroll.link_to(data-id="contacts")
                  svg.scroll__icon(viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
                   path(d="M12.0466 6.38016L7.99998 2.3335L3.95331 6.38016" stroke="#4F4F4F" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
                   path(d="M8 13.6668V2.44678" stroke="#4F4F4F" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
 
                  .scroll__label Scroll down
 
-    section#services
+    section#services.services
       .container.h-100
         .layout
           .layout__top
@@ -131,7 +140,9 @@ body(style="background: #121212")
                 img(src=require("./images/icons.png"), alt="JS frameworks")
 
     section#reviews.reviews.relative
-      .container.h-100
+      .background
+        img.background__item(src=require("./images/reviews_img.jpg"), alt="developer")
+      .container.h-100.relative
         .layout
           .layout__top
             h4.layout__title reviews
@@ -154,19 +165,19 @@ body(style="background: #121212")
               .scroll.hidden
                  img.scroll__icon(src=require("./images/mouse.svg"), alt="mouse")
                  .scroll__label keep scrolling
-              a.link(href="#" target="_blank")
-                 .link__label Read all reviews
-                 img.link__icon(src=require("./images/arrow.svg"), alt="Link arrow")
+              //- a.link(href="#" target="_blank")
+              //-    .link__label Read all reviews
+              //-    img.link__icon(src=require("./images/arrow.svg"), alt="Link arrow")
         .reviews__block
           img.reviews__block-bg(src=require("./images/reviews_img.jpg"), alt="people group")
-          .reviews__block-info
-            .reviews__block-performance 100%
-            .reviews__block-wrap
-              .reviews__block-title job success on
-              img.reviews__block-img(src=require("./images/upwork_logo.svg"), alt="Link arrow")
+        .reviews__block-info
+          .reviews__block-performance 100%
+          .reviews__block-wrap
+            .reviews__block-title job success on
+            img.reviews__block-img(src=require("./images/upwork_logo.svg"), alt="Link arrow")
   
-    section#about.about.relative
-      .container.h-100
+    section#about.about
+      .container.h-100.relative
         .layout
           .layout__top
             h4.layout__title about
@@ -187,17 +198,16 @@ body(style="background: #121212")
                  img.scroll__icon(src=require("./images/mouse.svg"), alt="mouse")
                  .scroll__label keep scrolling
         .about__block
-          .about__block-item
+          img.about__block-bg(src=require("./images/bg_earth.png"), alt="earth vector")
+          .about__block-item.item-1
             img.about__block-icon(src=require("./images/avatar.svg"), alt="user icon")
             p.about__block-text “I’m very pleased with the result”
-          .about__block-item
+          .about__block-item.item-2
             img.about__block-icon(src=require("./images/avatar.svg"), alt="user icon")
             p.about__block-text “Perfect details approach!”
-          .about__block-item
+          .about__block-item.item-3
             img.about__block-icon(src=require("./images/avatar.svg"), alt="user icon")
             p.about__block-text “I received exactly what I needed”
-      .about__bg
-        img(src=require("./images/bg_earth.svg"), alt="earth vector")
  
     section#contacts
       .container.h-100
@@ -228,12 +238,15 @@ body(style="background: #121212")
                   form(action="")
                     .form__input
                       input(type="text" placeholder="Write your email here") 
-                      img(src=require("./images/sms.svg"), alt="sms")
-                    button.form__btn send request
+                      svg(viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M14.1666 17.0832H5.83329C3.33329 17.0832 1.66663 15.8332 1.66663 12.9165V7.08317C1.66663 4.1665 3.33329 2.9165 5.83329 2.9165H14.1666C16.6666 2.9165 18.3333 4.1665 18.3333 7.08317V12.9165C18.3333 15.8332 16.6666 17.0832 14.1666 17.0832Z" stroke="#4F4F4F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+                        path(d="M14.1667 7.5L11.5584 9.58333C10.7 10.2667 9.2917 10.2667 8.43337 9.58333L5.83337 7.5" stroke="#4F4F4F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+                      .form__input-message Request sent. We will contact you soon.
+                    button.form__btn(disabled) send request
             .layout__footer
               .scroll
                  svg.scroll__icon(viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
                   path(d="M12.0466 6.38016L7.99998 2.3335L3.95331 6.38016" stroke="#4F4F4F" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
                   path(d="M8 13.6668V2.44678" stroke="#4F4F4F" stroke-width="0.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
 
-                 .scroll__label Go up
+                 .scroll__label.link_to(data-id="main") Go up

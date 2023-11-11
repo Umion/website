@@ -1,7 +1,7 @@
 import "./index.pug";
 import "./index.scss";
 
-import { debounce, throttle, scrollTo } from "./scripts/helpers";
+import { throttle, validateEmail } from "./scripts/helpers";
 
 const body = document.body;
 const hamburger = document.querySelector(".nav__hamburger");
@@ -10,77 +10,29 @@ const btnNav = document.querySelector(".nav__action");
 const links = document.querySelectorAll(".link_to");
 const sidebarDots = document.querySelectorAll(".sidebar__dot");
 const sections = document.querySelectorAll("section");
+const header = document.querySelector("header");
+const input = document.querySelector(".form__input input");
+const formInput = document.querySelector(".form__input");
+const formButton = document.querySelector(".form__btn");
+const formMessage = document.querySelector(".form__input-message");
 
 let isMobile;
-
-// const preloader = document.querySelector(".preloader");
-
-// window.addEventListener("load", () => {
-//   preloader.classList.add("hide");
-//   setTimeout(() => {
-//     preloader.remove();
-//   }, 500);
-// });
+let currentSections = "main";
+const sectionPos = {};
+const sectionName = {};
 
 document.addEventListener("DOMContentLoaded", function (event) {
   isMobile = window.innerWidth < 848;
 
-  function checkSize() {
-    if (isMobile) {
-      document.removeEventListener("scroll", scrollListener);
-      document.addEventListener("scroll", mobScrollListener);
-    } else {
-      document.removeEventListener("scroll", mobScrollListener);
-      document.addEventListener("scroll", scrollListener);
-    }
-  }
-  window.addEventListener("resize", checkSize);
-  checkSize();
-
+  document.addEventListener("scroll", scrollListener);
+  window.addEventListener("resize", checkResize);
+  input.addEventListener("input", inputListener);
+  formButton.addEventListener("click", formButtonListener);
   const darkBtnSections = ["main", "reviews"];
-  let isScrollLocked = false;
-  let debounceTime = 250;
-  let throttleTime = 200;
-
-  const sectionPos = {};
-  const sectionName = {};
 
   try {
-    links.forEach((l) => {
-      l.addEventListener("click", async (e) => {
-        e.preventDefault();
-        if (isScrollLocked) return;
-
-        const id = l.dataset.href;
-        const section = Array.from(sections).find((s) => s.id == id);
-        const sidebarDot = Array.from(sidebarDots).find(
-          (d) => d.dataset.id == id
-        );
-        if (section && sidebarDot) {
-          sidebarDots.forEach((dot) => dot.classList.remove("active"));
-          links.forEach((link) => link.classList.remove("active"));
-
-          l.classList.add("active");
-          sidebarDot.classList.add("active");
-
-          isScrollLocked = true;
-
-          const offset = isMobile ? 40 : 0;
-          scrollTo(section, offset).then((d) => {
-            isScrollLocked = false;
-          });
-
-          darkBtnSections.includes(id)
-            ? btnNav.classList.remove("light")
-            : btnNav.classList.add("light");
-        }
-        if (isMobile) {
-          hamburger.classList.remove("active");
-          mobNav.classList.remove("active");
-          body.classList.remove("overflow");
-        }
-      });
-    });
+    links.forEach(moveTo);
+    sidebarDots.forEach(moveTo);
   } catch (error) {
     console.log(error);
   }
@@ -103,60 +55,102 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   function scrollListener() {
-    debounce(() => {
-      const targetYCoordinate = window.innerHeight / 2;
-      const sectionEl = Array.from(sections).find((el) => {
-        const rect = el.getBoundingClientRect();
+    throttle(() => {
+      const scrollPos =
+        document.documentElement.scrollTop || document.body.scrollTop;
 
-        return (
-          targetYCoordinate >= rect.y &&
-          targetYCoordinate <= rect.y + rect.height
-        );
-      });
+      scrollPos > 50
+        ? header.classList.add("active")
+        : header.classList.remove("active");
 
-      if (sectionEl) {
-        sectionEl.scrollIntoView({
-          behavior: "smooth",
-        });
-
-        sidebarDots.forEach((dot) => {
-          dot.classList.remove("active");
-          if (sectionEl.id === dot.dataset.id) {
-            dot.classList.add("active");
-          }
-        });
+      for (let id in sectionPos) {
+        if (sectionPos[id] <= scrollPos + 50) {
+          currentSections = sectionName[id];
+        }
+      }
+      console.log(currentSections);
+      if (currentSections) {
         links.forEach((l) => {
           l.classList.remove("active");
-          if (sectionEl.id === l.dataset.href) {
+          if (currentSections === l.dataset.id) {
             l.classList.add("active");
           }
         });
-        darkBtnSections.includes(sectionEl.id)
+        sidebarDots.forEach((d) => {
+          d.classList.remove("active");
+          if (currentSections === d.dataset.id) {
+            d.classList.add("active");
+          }
+        });
+        darkBtnSections.includes(currentSections)
           ? btnNav.classList.remove("light")
           : btnNav.classList.add("light");
       }
-    }, debounceTime);
+    });
   }
-  function mobScrollListener() {
-    throttle(() => {
-      console.log("asd");
-      var scrollPos =
-        document.documentElement.scrollTop || document.body.scrollTop;
+  function moveTo(el) {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
 
-      let active;
-      for (let id in sectionPos) {
-        if (sectionPos[id] <= scrollPos + 62) {
-          active = sectionName[id];
-        }
-      }
-      if (active) {
-        links.forEach((l) => {
-          l.classList.remove("active");
-          if (active === l.dataset.href) {
-            l.classList.add("active");
-          }
+      const id = el.dataset.id;
+      const section = Array.from(sections).find((s) => s.id == id);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
         });
       }
-    }, throttleTime);
+      if (isMobile) {
+        hamburger.classList.remove("active");
+        mobNav.classList.remove("active");
+        body.classList.remove("overflow");
+      }
+    });
+  }
+  function inputListener(e) {
+    if (e.target.value.trim() == "") {
+      formInput.classList.remove("error");
+      formInput.classList.remove("success");
+      formInput.classList.remove("active");
+      formButton.disabled = true;
+      return;
+    }
+
+    formInput.classList.add("active");
+
+    if (validateEmail(e.target.value)) {
+      formInput.classList.remove("error");
+      formInput.classList.add("success");
+      formButton.disabled = false;
+    } else {
+      formInput.classList.remove("success");
+      formInput.classList.add("error");
+      formButton.disabled = true;
+    }
+  }
+  function formButtonListener(e) {
+    e.preventDefault();
+    if (input.value) {
+      // send data
+
+      //show message & clear input
+      formMessage.style.opacity = 1;
+      formInput.classList.remove("success");
+      formInput.classList.remove("error");
+      input.value = "";
+      formButton.disabled = true;
+
+      setTimeout(() => {
+        formMessage.style.opacity = 0;
+      }, 3000);
+    }
+  }
+  function checkResize(e) {
+    isMobile = window.innerWidth < 848;
+
+    sections.forEach((section) => {
+      sectionPos[section.id] = section.offsetTop;
+      sectionName[section.id] = section.id;
+    });
   }
 });

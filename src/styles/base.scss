@@ -28,6 +28,13 @@ a {
   color: inherit;
 }
 
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 input {
   position: relative;
   display: block;
@@ -37,7 +44,7 @@ input {
   background: none;
   font-size: 16px;
   line-height: 24px;
-  color: $grey400;
+  color: $white;
   padding: 12px 40px;
 
   &:focus {
@@ -76,6 +83,10 @@ button {
     border: 0;
     padding: 0;
   }
+
+  &:focus {
+    outline: 2px solid $grey500;
+  }
 }
 
 .button {
@@ -86,31 +97,68 @@ button {
   text-transform: uppercase;
   background: $black100;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  transition: 0.3s;
-
-  @media screen and (max-width: $size-xxl) {
-    font-size: 14px;
-    line-height: 20px;
-  }
+  font-size: 14px;
+  line-height: 20px;
+  transition: 0.4s;
 
   @media screen and (max-width: $size-lg) {
     padding: 10px 14px;
+  }
+
+  &:hover,
+  &:focus {
+    background: $grey500;
+  }
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    background: $black100;
+    color: $grey500;
+
+    svg path {
+      stroke: $grey500;
+    }
   }
 
   &.light {
     background: $primary;
     color: $black100;
 
+    &:hover,
+    &:focus {
+      background: $primary-dark;
+      color: $white;
+
+      svg path {
+        stroke: $white;
+      }
+    }
+
     svg path {
       stroke: $black100;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus {
+      cursor: default;
+      background: $grey200;
+      color: $grey300;
+
+      svg path {
+        stroke: $grey300;
+      }
     }
   }
 
   svg {
     width: 20px;
-    margin-left: 5px;
+    margin-left: 8px;
+
+    & path {
+      transition: 0.4s;
+    }
   }
 }
 
@@ -211,10 +259,6 @@ main > section {
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (max-width: $size-xxl) {
-    padding-top: 120px;
-  }
-
   @media screen and (max-width: $size-md) {
     height: auto;
     display: block;
@@ -245,13 +289,8 @@ main > section {
 
   &__title,
   &__description {
-    font-size: 18px;
-    line-height: 24px;
-
-    @media screen and (max-width: $size-xxl) {
-      font-size: 14px;
-      line-height: 20px;
-    }
+    font-size: 14px;
+    line-height: 20px;
 
     @media screen and (max-width: $size-md) {
       font-size: 12px;
@@ -260,13 +299,8 @@ main > section {
   }
 
   &__title-main {
-    font-size: 60px;
-    line-height: 64px;
-
-    @media screen and (max-width: $size-xxl) {
-      font-size: 48px;
-      line-height: 56px;
-    }
+    font-size: 48px;
+    line-height: 56px;
 
     @media screen and (max-width: $size-md) {
       font-size: 32px;
@@ -292,7 +326,7 @@ main > section {
   }
 
   &__footer {
-    padding: 50px 0;
+    padding: 56px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -305,6 +339,33 @@ main > section {
       flex-direction: column;
       padding: 24px 0 30px;
     }
+  }
+}
+
+.background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+
+  &__item {
+    position: absolute;
+    right: 0;
+    left: 290px;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (max-width: $size-xl) {
+      left: 260px;
+    }
+    @media screen and (max-width: $size-lg) {
+      left: 215px;
+    }
+  }
+  @media screen and (max-width: $size-md) {
+    display: none;
   }
 }
 
@@ -343,6 +404,8 @@ main > section {
 
   &__label {
     color: $primary;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -353,13 +416,8 @@ main > section {
 .scroll,
 .link,
 .main__label-sm {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
-
-  @media screen and (max-width: $size-xxl) {
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   @media screen and (max-width: $size-lg) {
     font-size: 14px;
@@ -408,9 +466,39 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  padding-top: 20px;
+  padding: 16px 0;
   width: 100%;
   z-index: 999;
+
+  &.active:after {
+    opacity: 1;
+  }
+
+  &.active .nav__link {
+    color: $white;
+
+    span:before {
+      background: $white;
+    }
+  }
+
+  &:after {
+    transition: all ease-out 0.5s;
+    content: "";
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(17px);
+    z-index: -1;
+    opacity: 0;
+
+    @media screen and (max-width: $size-md) {
+      display: none;
+    }
+  }
 
   &::before {
     @media screen and (max-width: $size-md) {
@@ -425,7 +513,7 @@ header {
   }
 
   @media screen and (max-width: $size-md) {
-    padding-top: 4px;
+    padding: 4px 0;
   }
 
   // visual helper for development
@@ -433,11 +521,8 @@ header {
   //   position: absolute;
   //   left: 0;
   //   top: 0;
-  //   content: "fullhd";
+  //   content: "xxl";
 
-  //   @media screen and (max-width: $size-xxl) {
-  //     content: "$size-xxl";
-  //   }
   //   @media screen and (max-width: $size-xl) {
   //     content: "$size-xl";
   //   }
@@ -459,7 +544,8 @@ header {
   justify-content: space-between;
 
   &__logo {
-    width: 150px;
+    display: flex;
+    width: 125px;
     z-index: 1;
 
     img {
@@ -477,6 +563,7 @@ header {
       width: 100%;
       height: 100vh;
       backdrop-filter: blur(17px);
+      background: rgba(0, 0, 0, 0.2);
     }
 
     &.active {
@@ -496,20 +583,14 @@ header {
 
   &__link {
     text-transform: uppercase;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     color: $grey350;
-    padding: 8px 12px;
     margin: 0 8px;
     font-weight: 700;
-
-    @media screen and (max-width: $size-xxl) {
-      font-size: 14px;
-      line-height: 20px;
-    }
+    transition: 0.4s;
 
     @media screen and (max-width: $size-lg) {
-      padding: 5px 10px;
       margin: 0;
     }
 
@@ -517,20 +598,71 @@ header {
       font-size: 16px;
       line-height: 24px;
       color: $white;
-      padding: 12px 16px;
     }
 
     &:hover {
       color: $primary;
     }
 
-    & a.active {
+    & span {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: $primary;
+        transition: 0.4s;
+      }
+    }
+
+    &:hover span:before {
+      width: 100%;
+    }
+
+    &:hover {
       color: $primary;
-      border-bottom: 1px solid $primary;
+    }
+
+    & a.link_to {
+      @media screen and (max-width: $size-md) {
+        display: inline-block;
+      }
+    }
+
+    & a {
+      padding: 8px 12px;
+
+      & span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: $primary;
+        transition: 0.4s;
+      }
+
+      @media screen and (max-width: $size-lg) {
+        padding: 5px 10px;
+      }
+
+      @media screen and (max-width: $size-md) {
+        padding: 12px 16px;
+      }
+    }
+
+    & a.active {
+      & span:before {
+        width: 100%;
+      }
 
       @media screen and (max-width: $size-md) {
         color: $white;
-        border-bottom: 1px solid $white;
       }
     }
   }
@@ -548,6 +680,7 @@ header {
     position: relative;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
+    margin-top: 8px;
     cursor: pointer;
 
     @media screen and (max-width: $size-md) {
@@ -603,14 +736,10 @@ header {
 
 .sidebar {
   position: fixed;
-  left: 50px;
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 999;
-
-  @media screen and (max-width: $size-xxl) {
-    left: 40px;
-  }
 
   @media screen and (max-width: $size-xl) {
     left: 30px;
@@ -628,12 +757,13 @@ header {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 2px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.4s;
+    cursor: pointer;
 
     &:before {
       content: "";
@@ -642,6 +772,11 @@ header {
       height: 5px;
       background: $white;
       border-radius: 5px;
+    }
+
+    &:hover {
+      background: rgba(79, 79, 79, 0.3);
+      border: 2px solid rgba(79, 79, 79, 1);
     }
 
     &.active {
@@ -665,14 +800,44 @@ header {
   & .container {
     position: relative;
 
-    @media screen and (max-width: $size-xxl) {
+    @media screen and (max-width: $size-xl) {
       position: static;
     }
   }
 
-  & .layout {
-    justify-content: flex-startl;
+  &__highlight {
+    position: absolute;
+    width: 66px;
+    top: 60px;
+    left: 387px;
 
+    @media screen and (max-width: $size-xl) {
+      left: 286px;
+    }
+    @media screen and (max-width: $size-lg) {
+      width: 55px;
+      top: 64px;
+      left: 190px;
+    }
+    @media screen and (max-width: $size-md) {
+      display: none;
+    }
+
+    &-sm {
+      display: none;
+
+      @media screen and (max-width: $size-md) {
+        display: block;
+        position: absolute;
+        width: 50px;
+        top: 50px;
+        left: 150px;
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  & .layout {
     &__top {
       flex-grow: 1;
       display: flex;
@@ -680,6 +845,15 @@ header {
     }
 
     &__footer {
+      padding: 82px 360px 72px 0;
+
+      @media screen and (max-width: $size-xl) {
+        padding-right: 280px;
+      }
+      @media screen and (max-width: $size-lg) {
+        padding-right: 210px;
+      }
+
       @media screen and (max-width: $size-md) {
         position: relative;
         display: block;
@@ -688,17 +862,29 @@ header {
     }
   }
 
+  &__block {
+    display: none;
+    margin-bottom: -10px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+    @media screen and (max-width: $size-md) {
+      display: block;
+    }
+
+    @media screen and (max-width: $size-sm) {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
   &__title {
     width: 100%;
 
     & h2 {
-      font-size: 110px;
-      line-height: 120px;
-
-      @media screen and (max-width: $size-xxl) {
-        font-size: 96px;
-        line-height: 104px;
-      }
+      font-size: 96px;
+      line-height: 104px;
 
       @media screen and (max-width: $size-lg) {
         font-size: 75px;
@@ -762,35 +948,6 @@ header {
     }
   }
 
-  &__block {
-    position: absolute;
-    top: 0;
-    right: -150px;
-    width: 500px;
-
-    @media screen and (max-width: $size-xxl) {
-      right: 0;
-      width: 400px;
-    }
-
-    @media screen and (max-width: $size-xl) {
-      width: 340px;
-    }
-
-    @media screen and (max-width: $size-md) {
-      position: static;
-      margin-bottom: -10px;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-    }
-
-    @media screen and (max-width: $size-sm) {
-      height: 400px;
-      object-fit: cover;
-    }
-  }
-
   &__scroll {
     display: none;
     position: absolute;
@@ -830,17 +987,17 @@ header {
 // ***** MAIN END *****
 
 // ***** SERVICES START *****
-
+.services {
+  & .layout__footer {
+    padding-top: 52px;
+  }
+}
 .service {
   flex-grow: 1;
-  padding: 35px;
+  padding: 28px 28px 32px;
   margin: 0 20px;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 20px;
-
-  @media screen and (max-width: $size-xxl) {
-    padding: 28px;
-  }
 
   @media screen and (max-width: $size-xl) {
     padding: 20px 25px;
@@ -868,27 +1025,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 45px;
-
-    @media screen and (max-width: $size-xxl) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 46px;
 
     @media screen and (max-width: $size-lg) {
       margin-bottom: 24px;
     }
   }
   &__title {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: -2px;
     font-weight: 700;
-
-    @media screen and (max-width: $size-xxl) {
-      font-size: 32px;
-      line-height: 40px;
-      margin-bottom: 5px;
-    }
 
     @media screen and (max-width: $size-xl) {
       font-size: 28px;
@@ -908,13 +1055,8 @@ header {
   }
   &__subtitle {
     color: $grey300;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
-
-    @media screen and (max-width: $size-xxl) {
-      font-size: 16px;
-      line-height: 24px;
-    }
 
     @media screen and (max-width: $size-lg) {
       font-size: 14px;
@@ -940,13 +1082,8 @@ header {
   &__list p {
     position: relative;
     color: $grey100;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
-
-    @media screen and (max-width: $size-xxl) {
-      font-size: 16px;
-      line-height: 24px;
-    }
 
     @media screen and (max-width: $size-lg) {
       font-size: 14px;
@@ -1050,6 +1187,7 @@ header {
     &__footer {
       @media screen and (max-width: $size-md) {
         margin-top: 500px;
+        padding-right: 0;
       }
 
       @media screen and (max-width: $size-sm) {
@@ -1058,23 +1196,13 @@ header {
     }
   }
 
-  & .container {
-    position: relative;
-
-    @media screen and (max-width: $size-xxl) {
-      position: static;
-    }
-
-    @media screen and (max-width: $size-md) {
-      position: relative;
-    }
-  }
   &__block {
     position: absolute;
     right: 0;
     top: 0;
 
     @media screen and (max-width: $size-md) {
+      display: block;
       right: auto;
       top: auto;
       left: 0;
@@ -1088,17 +1216,11 @@ header {
     }
 
     &-bg {
+      display: none;
       width: 435px;
 
-      @media screen and (max-width: $size-xl) {
-        width: 340px;
-      }
-
-      @media screen and (max-width: $size-lg) {
-        width: 280px;
-      }
-
       @media screen and (max-width: $size-md) {
+        display: inline;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1107,9 +1229,9 @@ header {
 
     &-info {
       position: absolute;
-      left: -240px;
-      bottom: -70px;
-      padding: 100px 30px;
+      right: 256px;
+      bottom: 55px;
+      padding: 104px 28px 98px;
       font-weight: 700;
       text-align: center;
       background: $white06;
@@ -1117,29 +1239,27 @@ header {
       border-radius: 20px;
 
       @media screen and (max-width: $size-xl) {
-        left: -200px;
-        bottom: -90px;
-        padding: 75px 20px;
+        padding: 90px 28px;
+        right: 155px;
       }
 
       @media screen and (max-width: $size-lg) {
-        left: -100px;
-        bottom: -80px;
-        padding: 50px 20px;
+        right: 75px;
+        padding: 75px 25px;
       }
 
       @media screen and (max-width: $size-md) {
         left: 50%;
-        top: -75px;
+        right: auto;
+        bottom: 420px;
         transform: translateX(-50%);
-        bottom: auto;
         padding: 16px 30px;
         display: flex;
         align-items: center;
       }
       @media screen and (max-width: $size-sm) {
         padding: 10px 15px;
-        top: -60px;
+        bottom: 375px;
       }
     }
 
@@ -1152,7 +1272,7 @@ header {
       font-size: 96px;
       line-height: 104px;
       color: $primary;
-      margin-bottom: 35px;
+      margin-bottom: 28px;
 
       @media screen and (max-width: $size-xl) {
         font-size: 85px;
@@ -1207,86 +1327,76 @@ header {
 
 .about {
   & .layout__description {
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 50px;
-  }
-  &__bg {
-    width: 38%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    @media screen and (max-width: $size-xxl) {
-      width: 42%;
-    }
-
-    @media screen and (max-width: $size-xl) {
-      width: 550px;
-    }
-
-    @media screen and (max-width: $size-lg) {
-      width: 440px;
-    }
-
-    @media screen and (max-width: $size-md) {
-      width: 370px;
-    }
-
-    @media screen and (max-width: $size-md) {
-      width: 310px;
-    }
-
-    & img {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      right: 0;
-    }
   }
 
   & .container {
     position: relative;
-
-    @media screen and (max-width: $size-xxl) {
-      position: static;
-    }
   }
 
   &__block {
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    width: 702px;
+    height: 702px;
+    bottom: -68px;
+    right: -262px;
+
+    @media screen and (max-width: $size-xl) {
+      width: 650px;
+      height: 650px;
+      right: -200px;
+    }
+
+    @media screen and (max-width: $size-lg) {
+      width: 550px;
+      height: 570px;
+    }
 
     @media screen and (max-width: $size-md) {
       position: relative;
-      height: 360px;
-      top: 0;
-      transform: translateY(0%);
+      width: 100%;
+      left: auto;
+      right: auto;
+      bottom: auto;
+
+      height: 380px;
       margin-top: 50px;
     }
 
     @media screen and (max-width: $size-sm) {
-      height: 290px;
+      height: 360px;
+    }
+
+    &-bg {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+
+      @media screen and (max-width: $size-md) {
+        left: 40px;
+        width: 450px;
+      }
+
+      @media screen and (max-width: $size-sm) {
+        left: 30px;
+        width: 400px;
+      }
     }
 
     &-item {
       position: absolute;
-      padding: 25px;
+      padding: 16px;
       background: $white06;
       backdrop-filter: blur(22px);
       border-radius: 12px;
-      width: 250px;
-      font-size: 18px;
-      line-height: 26px;
-
-      @media screen and (max-width: $size-xxl) {
-        padding: 16px;
-        width: 210px;
-        font-size: 16px;
-        line-height: 24px;
-      }
+      width: 201px;
+      font-size: 16px;
+      line-height: 24px;
 
       @media screen and (max-width: $size-lg) {
         width: 170px;
@@ -1303,23 +1413,13 @@ header {
         line-height: 16px;
       }
 
-      &:nth-child(1) {
-        top: -250px;
-        right: 350px;
-
-        @media screen and (max-width: $size-xxl) {
-          top: -230px;
-          right: 400px;
-        }
-
-        @media screen and (max-width: $size-xl) {
-          top: -220px;
-          right: 330px;
-        }
+      &.item-1 {
+        top: 72px;
+        left: 14px;
 
         @media screen and (max-width: $size-lg) {
-          top: -150px;
-          right: 220px;
+          top: 60px;
+          left: 0px;
         }
 
         @media screen and (max-width: $size-md) {
@@ -1333,22 +1433,13 @@ header {
         }
       }
 
-      &:nth-child(2) {
-        top: -150px;
-        right: 0;
-
-        @media screen and (max-width: $size-xxl) {
-          right: 100px;
-        }
-
-        @media screen and (max-width: $size-xl) {
-          top: -120px;
-          right: 50px;
-        }
+      &.item-2 {
+        top: 144px;
+        left: 303px;
 
         @media screen and (max-width: $size-lg) {
-          top: -80px;
-          right: 20px;
+          top: 130px;
+          left: 220px;
         }
 
         @media screen and (max-width: $size-md) {
@@ -1363,22 +1454,13 @@ header {
         }
       }
 
-      &:nth-child(3) {
-        top: -30px;
-        right: 300px;
-
-        @media screen and (max-width: $size-xxl) {
-          right: 360px;
-        }
-
-        @media screen and (max-width: $size-xl) {
-          top: -30px;
-          right: 300px;
-        }
+      &.item-3 {
+        top: 248px;
+        left: 62px;
 
         @media screen and (max-width: $size-lg) {
-          top: 0px;
-          right: 205px;
+          top: 210px;
+          left: 30px;
         }
 
         @media screen and (max-width: $size-md) {
@@ -1390,12 +1472,8 @@ header {
     }
 
     &-icon {
-      width: 40px;
-      margin-bottom: 28px;
-
-      @media screen and (max-width: $size-xxl) {
-        width: 32px;
-      }
+      width: 32px;
+      margin-bottom: 22px;
 
       @media screen and (max-width: $size-lg) {
         margin-bottom: 20px;
@@ -1433,21 +1511,16 @@ header {
     }
   }
   &__card {
-    min-height: 320px;
+    min-height: 286px;
     flex-grow: 1;
     width: 50%;
     background: $white06;
     backdrop-filter: blur(13px);
     border-radius: 20px;
-    padding: 35px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    @media screen and (max-width: $size-xxl) {
-      min-height: 300px;
-      padding: 28px;
-    }
 
     @media screen and (max-width: $size-xl) {
       min-height: 260px;
@@ -1464,16 +1537,12 @@ header {
     }
 
     &-title {
-      font-size: 40px;
+      font-size: 32px;
       line-height: 40px;
       font-weight: 700;
       display: flex;
       align-items: center;
       margin-bottom: 20px;
-
-      @media screen and (max-width: $size-xxl) {
-        font-size: 32px;
-      }
 
       @media screen and (max-width: $size-xl) {
         font-size: 26px;
@@ -1490,13 +1559,9 @@ header {
       & span {
         display: inline-block;
         position: relative;
-        padding-left: 40px;
+        padding-left: 36px;
         margin-left: 10px;
         color: $grey100;
-
-        @media screen and (max-width: $size-xxl) {
-          padding-left: 36px;
-        }
 
         @media screen and (max-width: $size-xl) {
           padding-left: 30px;
@@ -1510,13 +1575,9 @@ header {
       & img {
         position: absolute;
         left: 0;
-        top: 25%;
-        width: 42px;
+        top: 30%;
+        width: 36px;
 
-        @media screen and (max-width: $size-xxl) {
-          top: 30%;
-          width: 36px;
-        }
         @media screen and (max-width: $size-xl) {
           top: 30%;
           width: 30px;
@@ -1582,7 +1643,20 @@ header {
       margin: 0 0 15px;
     }
 
+    &.success input {
+      border-bottom: 1px solid $success;
+    }
+
+    &.error input {
+      border-bottom: 1px solid $error;
+    }
+
     & input {
+      transition: 0.4s;
+
+      &:hover {
+        background: $white06;
+      }
       @media screen and (max-width: $size-lg) {
         font-size: 14px;
         line-height: 20px;
@@ -1595,15 +1669,39 @@ header {
       }
     }
 
-    & img {
+    & svg {
       width: 20px;
       position: absolute;
       left: 8px;
       top: 50%;
       transform: translateY(-50%);
 
+      & path {
+        transition: 0.3s;
+      }
+
       @media screen and (max-width: $size-lg) {
         left: 4px;
+      }
+    }
+
+    &.active svg path {
+      stroke: $white;
+    }
+
+    &-message {
+      transition: 0.4s;
+      position: absolute;
+      left: 5px;
+      bottom: -15px;
+      width: 100%;
+      font-size: 10px;
+      line-height: 12px;
+      color: $success;
+      opacity: 0;
+
+      @media screen and (max-width: $size-lg) {
+        bottom: -13px;
       }
     }
   }
@@ -1618,6 +1716,24 @@ header {
     line-height: 20px;
     text-transform: uppercase;
     color: $white;
+    transition: 0.4s;
+
+    &:hover,
+    &:focus {
+      background: $grey500;
+    }
+
+    &:disabled,
+    &:disabled:hover,
+    &:disabled:focus {
+      cursor: default;
+      background: $black100;
+      color: $grey500;
+
+      svg path {
+        stroke: $grey500;
+      }
+    }
 
     @media screen and (max-width: $size-lg) {
       padding: 10px 24px;
