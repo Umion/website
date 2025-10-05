@@ -468,8 +468,6 @@ function resetArrow(sel) {
 }
 
 function initAssortmentSlider(screenWidth) {
-  console.log(1, screenWidth);
-
   const containerLg = document.querySelector(".assortment-content-lg");
   const containerMd = document.querySelector(".assortment-content-md");
   const prevBtn = document.querySelector(".assortment-prev");
