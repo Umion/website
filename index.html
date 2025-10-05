@@ -1,0 +1,4110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Responsive Navbar</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      target="_blank"
+      href="./styles.css"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+    />
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="garanty">
+        <img
+          src="images/platinum-logo.png"
+          class="garanty__img"
+          alt="garanty logo"
+        />
+        <span class="garanty__text">До 30 років гарантії від виробника</span>
+        <span class="garanty__link popup-trigger">Обрати покрівлю</span>
+      </div>
+      <div class="container">
+        <div class="navbar">
+          <a href="#hero">
+            <img src="images/IKO_logo.png" class="navbar__logo" alt="logo" />
+          </a>
+          <div class="navbar__menu">
+            <ul>
+              <li>
+                <a href="#collections" class="link">колекції</a>
+              </li>
+              <li>
+                <a href="#about" class="link">Про IKO</a>
+              </li>
+              <li>
+                <a href="#why" class="link">Чому IKO?</a>
+              </li>
+              <li>
+                <a href="#assortment" class="link">Асортимент</a>
+              </li>
+              <li>
+                <a href="#visualizer" class="link">Калькулятор</a>
+              </li>
+              <li>
+                <a href="#media" class="link">Медіатека</a>
+              </li>
+            </ul>
+            <div class="navbar__langs">
+              <span class="active">UA</span>
+              <span>BG</span>
+            </div>
+            <button class="button navbar__button popup-trigger">
+              <img src="images/icon_phone_white.svg" alt="phone icon" />
+              <span>Замовити дзвінок</span>
+            </button>
+          </div>
+
+          <div class="navbar__menu--md">
+            <button class="button navbar__button popup-trigger">
+              <img src="images/icon_phone_white.svg" alt="phone icon" />
+              <span>Замовити дзвінок</span>
+            </button>
+            <div class="nav-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-menu">
+      <ul>
+        <li>
+          <a href="#collections" class="link">колекції</a>
+        </li>
+        <li>
+          <a href="#about" class="link">Про IKO</a>
+        </li>
+        <li>
+          <a href="#why" class="link">Чому IKO?</a>
+        </li>
+        <li>
+          <a href="#assortment" class="link">Асортимент</a>
+        </li>
+        <li>
+          <a href="#visualizer" class="link">Калькулятор</a>
+        </li>
+        <li>
+          <a href="#media" class="link">Медіатека</a>
+        </li>
+      </ul>
+      <button class="button navbar__button popup-trigger">
+        <img src="images/icon_phone_white.svg" alt="phone icon" />
+        <span>Замовити дзвінок</span>
+      </button>
+      <div class="mobile-menu__text">
+        Підтримка представника бренду в Україні
+      </div>
+
+      <div class="mobile-menu__contacts">
+        <a href="tel:+380001211133">
+          <img src="images/icon_phone_black.svg" alt="" />
+          <span>+38 (000) 121-11-33</span>
+        </a>
+        <a href="mailto:support@iko.com">
+          <img src="images/icon_message_black.svg" alt="" />
+          <span>support@iko.com</span>
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container relative">
+          <div class="card hero__card">
+            <img
+              src="images/card-1.jpg"
+              alt="Cambridge Xtreme 9.5"
+              class="card__img"
+              loading="lazy"
+            />
+            <img src="images/logo_iko-sm.png" class="card__img-sm" alt="" />
+            <div class="card__content">
+              <h4 class="card__title heading">Cambridge Xtreme 9.5</h4>
+              <a href="#assortment" class="button-gray">
+                <span>Дивитись Асортимент</span>
+              </a>
+            </div>
+            <img
+              src="images/card-decor-box.svg"
+              alt=""
+              class="card__decor-box"
+            />
+            <img
+              src="images/card-decor-line.svg"
+              alt=""
+              class="card__decor-line"
+            />
+          </div>
+          <h1 class="hero__title">Бітумна покрівля <span>IKO</span></h1>
+          <h2 class="hero__subtitle">
+            Якість, перевірена <span>десятиліттями</span>
+          </h2>
+          <button class="button popup-trigger">Обрати покрівлю</button>
+          <img class="hero__icon" src="images/roof-icon.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="collections">
+        <div class="anchor" id="collections"></div>
+        <div class="container">
+          <h3 class="decor">Колекції IKO</h3>
+          <div class="roof-grid collections__content">
+            <div class="item wide">
+              <img src="images/collections-1.jpg" class="item__img" alt="" />
+              <span class="label">Cambridge Xtreme 9.5</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Cambridge Xtreme 9.5</h4>
+                <img src="images/bage-1.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/collections-2.jpg" class="item__img" alt="" />
+              <span class="label">Cambridge Xpress</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Cambridge Xpress</h4>
+                <img src="images/bage-2.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/collections-3.jpg" class="item__img" alt="" />
+              <span class="label">Monarch-Diamant</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Monarch-Diamant</h4>
+                <img src="images/bage-3.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/collections-4.jpg" class="item__img" alt="" />
+              <span class="label">Armour Shield Plus</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Armour Shield Plus</h4>
+                <img src="images/bage-4.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/collections-5.jpg" class="item__img" alt="" />
+              <span class="label">Diamant Shield Plus</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Diamant Shield Plus</h4>
+                <img src="images/bage-5.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item empty i1"></div>
+            <div class="item">
+              <img src="images/collections-6.jpg" class="item__img" alt="" />
+              <span class="label">Armourglass Plus</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Armourglass Plus</h4>
+                <img src="images/bage-6.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/collections-7.jpg" class="item__img" alt="" />
+              <span class="label">Victorian Plus</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Victorian Plus</h4>
+                <img src="images/bage-7.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item empty"></div>
+            <div class="item">
+              <img src="images/collections-8.jpg" class="item__img" alt="" />
+              <span class="label">Diamant Plus</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Diamant Plus</h4>
+                <img src="images/bage-8.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="images/collections-9.jpg" class="item__img" alt="" />
+              <span class="label">Superglass</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Superglass</h4>
+                <img src="images/bage-9.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item empty i2"></div>
+            <div class="item wide">
+              <img src="images/collections-10.jpg" class="item__img" alt="" />
+              <span class="label">Superglass Biber</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Superglass Biber</h4>
+                <img src="images/bage-10.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+            <div class="item empty i1"></div>
+            <div class="item">
+              <img src="images/collections-11.jpg" class="item__img" alt="" />
+              <span class="label">Superglass Hex</span>
+              <div class="item-info">
+                <h4 class="item-info__label heading">Superglass Hex</h4>
+                <img src="images/bage-11.svg" alt="" />
+                <p class="item-info__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+                  alias officia natus deserunt quaerat fugiat, amet quia, fugit
+                  assumenda ullam sit doloribus accusamus doloremque vel
+                  molestiae magnam aspernatur aperiam incidunt.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="collections__content-md">
+            <div class="collections-glider-md">
+              <div class="item-md">
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-1.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-2.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-3.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-4.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item-md">
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-1.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-2.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-3.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+                <div class="item wide">
+                  <img
+                    src="images/collections-md-4.jpg"
+                    class="item__img"
+                    alt=""
+                  />
+                  <span class="label">Cambridge Xtreme 9.5</span>
+                  <div class="item-info">
+                    <h4 class="item-info__label heading">
+                      Cambridge Xtreme 9.5
+                    </h4>
+                    <img src="images/bage-1.svg" alt="" />
+                    <p class="item-info__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut alias officia natus deserunt quaerat fugiat, amet
+                      quia, fugit assumenda ullam sit doloribus accusamus
+                      doloremque vel molestiae magnam aspernatur aperiam
+                      incidunt.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="glider__arrows">
+              <div class="collection-prev-md">
+                <img src="/images/arrow_left.svg" alt="" />
+              </div>
+              <div class="collection-next-md">
+                <img src="/images/arrow_right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="collections__content-sm">
+            <div class="collections-glider-sm">
+              <div class="item wide">
+                <img
+                  src="images/collections-sm-1.jpg"
+                  class="item__img"
+                  alt=""
+                />
+                <span class="label">Cambridge Xtreme 9.5</span>
+                <div class="item-info">
+                  <h4 class="item-info__label heading">Cambridge Xtreme 9.5</h4>
+                  <img src="images/bage-1.svg" alt="" />
+                  <p class="item-info__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut alias officia natus deserunt quaerat fugiat, amet quia,
+                    fugit assumenda ullam sit doloribus accusamus doloremque vel
+                    molestiae magnam aspernatur aperiam incidunt.
+                  </p>
+                </div>
+              </div>
+              <div class="item wide">
+                <img
+                  src="images/collections-sm-1.jpg"
+                  class="item__img"
+                  alt=""
+                />
+                <span class="label">Cambridge Xtreme 9.5</span>
+                <div class="item-info">
+                  <h4 class="item-info__label heading">Cambridge Xtreme 9.5</h4>
+                  <img src="images/bage-1.svg" alt="" />
+                  <p class="item-info__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut alias officia natus deserunt quaerat fugiat, amet quia,
+                    fugit assumenda ullam sit doloribus accusamus doloremque vel
+                    molestiae magnam aspernatur aperiam incidunt.
+                  </p>
+                </div>
+              </div>
+              <div class="item wide">
+                <img
+                  src="images/collections-sm-1.jpg"
+                  class="item__img"
+                  alt=""
+                />
+                <span class="label">Cambridge Xtreme 9.5</span>
+                <div class="item-info">
+                  <h4 class="item-info__label heading">Cambridge Xtreme 9.5</h4>
+                  <img src="images/bage-1.svg" alt="" />
+                  <p class="item-info__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut alias officia natus deserunt quaerat fugiat, amet quia,
+                    fugit assumenda ullam sit doloribus accusamus doloremque vel
+                    molestiae magnam aspernatur aperiam incidunt.
+                  </p>
+                </div>
+              </div>
+              <div class="item wide">
+                <img
+                  src="images/collections-sm-1.jpg"
+                  class="item__img"
+                  alt=""
+                />
+                <span class="label">Cambridge Xtreme 9.5</span>
+                <div class="item-info">
+                  <h4 class="item-info__label heading">Cambridge Xtreme 9.5</h4>
+                  <img src="images/bage-1.svg" alt="" />
+                  <p class="item-info__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut alias officia natus deserunt quaerat fugiat, amet quia,
+                    fugit assumenda ullam sit doloribus accusamus doloremque vel
+                    molestiae magnam aspernatur aperiam incidunt.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="glider__arrows">
+              <div class="collection-prev-sm">
+                <img src="/images/arrow_left.svg" alt="" loading="lazy" />
+              </div>
+              <div class="collection-next-sm">
+                <img src="/images/arrow_right.svg" alt="" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="anchor anchor-2" id="about"></div>
+        <div class="container">
+          <div class="about__title-wrap">
+            <h3 class="about__title decor">
+              IKO — глобальний та перевірений виробник бітумної покрівлі
+            </h3>
+            <div class="about__info">
+              <p>
+                IКО — піонер у галузі бітумної покрівлі, що гарантує
+                безкомпромісну якість та надійність.
+              </p>
+              <p class="mb-20">
+                Компанія повністю контролює виробничий процес від видобутку
+                базальту та обробки бітуму до створення власних покрівельних
+                матеріалів.
+              </p>
+              <div class="button-gray about__read-more">
+                <span>Читати більше</span>
+                <img src="images/icon_plus.svg" alt="" />
+              </div>
+              <p class="about__more">
+                Завдяки інноваційним технологіям та суворим стандартам, покрівля
+                IKO забезпечує довговічний захист і бездоганний зовнішній
+                вигляд. Обираючи IKO, ви обираєте експертний досвід та
+                перевірену якість, які витримують випробування часом
+              </p>
+            </div>
+          </div>
+          <div class="about__list">
+            <div class="about__item">
+              <h4 class="about__item-title heading">
+                Більше 700 млн. м² на рік
+              </h4>
+              <div class="about__item-description">
+                Найбільший у світі виробник та експортер покрівельних
+                матерівлів.
+              </div>
+            </div>
+            <div class="about__item">
+              <h4 class="about__item-title heading">фінансова стабільність</h4>
+              <div class="about__item-description">
+                Відсутність кредитних зобов’язань.
+              </div>
+            </div>
+            <div class="about__item">
+              <h4 class="about__item-title heading">повний цикл виробництва</h4>
+              <div class="about__item-description">
+                IKO — єдиний виробник покрівельних матеріалів повного циклу
+                виробництва
+              </div>
+            </div>
+            <div class="about__item">
+              <h4 class="about__item-title heading">70+ років досвіду</h4>
+              <div class="about__item-description">
+                Рік заснування компанії — 1951. Більше 70 років успішного
+                досвіду
+              </div>
+            </div>
+            <div class="about__item">
+              <h4 class="about__item-title heading">37 підприємств</h4>
+              <div class="about__item-description">
+                IKO — глобальний гравець: налічує 37 підприємств у Північний
+                Америці та Європі
+              </div>
+            </div>
+          </div>
+          <div class="about-garanty">
+            <div class="about-garanty__content">
+              <div class="about-garanty__title">Років гарантії</div>
+              <img src="/images/platinum-logo-lg.png" alt="" />
+            </div>
+
+            <div class="timeline">
+              <div class="timeline__row">
+                <div class="timeline__col">0</div>
+                <div class="timeline__col">5</div>
+                <div class="timeline__col">10</div>
+                <div class="timeline__col">15</div>
+                <div class="timeline__col">20</div>
+                <div class="timeline__col">25</div>
+                <div class="timeline__col">30</div>
+              </div>
+              <div class="timeline__content">
+                <h4 class="timeline-label__other">
+                  Гарантія на продукцію інших виробників
+                </h4>
+                <div class="timeline-chart__other"></div>
+                <h4 class="timeline-label__iko">
+                  Platinum guarantee на продукцію IKO
+                </h4>
+                <div class="timeline-chart__iko"></div>
+              </div>
+              <div class="timeline__label">
+                Гарантія на бітумні покрівлі, роки
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why">
+        <div class="anchor" id="why"></div>
+        <div class="container">
+          <h3 class="decor">Чому IKO?</h3>
+          <div class="roof-grid why-content">
+            <div class="why-item empty"></div>
+            <div class="why-item wide">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">01</div>
+              <h4 class="why-item__label heading">Cambridge Xpress Lane</h4>
+              <p class="why-item__description">
+                Велика область для кріплення цвяхами, яку називають “Cambridge
+                Xpress Lane”, для надійного монтажу черепиці (особливо на дахах
+                з великим кутом нахилу) та для більш простого і швидкого
+                монтажу.
+              </p>
+            </div>
+            <div class="why-item">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">02</div>
+              <h4 class="why-item__label heading">Швидкий монтаж</h4>
+              <p class="why-item__description">
+                Найбільший розмір листа черепиці (площа покриття більша,
+                ніж у будь-якої іншої стандартної черепиці), що дозволяє
+                прискорити монтаж.
+              </p>
+            </div>
+            <div class="why-item empty why-hide"></div>
+            <div class="why-item empty why-hide"></div>
+            <div class="why-item">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">03</div>
+              <h4 class="why-item__label heading">
+                Стійкість до вітрових навантажень
+              </h4>
+              <p class="why-item__description">
+                Стійкість до впливу сильних вітрів в результаті надійного
+                зчеплення гонтів між собою.
+              </p>
+            </div>
+            <div class="why-item">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">04</div>
+              <h4 class="why-item__label heading">Надійна гідроізоляція</h4>
+              <p class="why-item__description">
+                Абсолютний захист від затікань навіть під час сильних дощів
+                через створення щільного водонепроникного покрівельного шару.
+              </p>
+            </div>
+            <div class="why-item wide">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">05</div>
+              <h4 class="why-item__label heading">Насичені природні кольори</h4>
+              <p class="why-item__description">
+                Завдяки фарбуванню грануляту методом “варифікації” досягається
+                профарбовування камею на всю глибину, що забезпечує природну
+                насиченість кольорів і стійкість до вигорання. Відмінне рішення
+                для реконструкції.
+              </p>
+            </div>
+            <div class="why-item">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">06</div>
+              <h4 class="why-item__label heading">
+                Відмінне рішення для реконструкції
+              </h4>
+              <p class="why-item__description">
+                IKO виробляє гнучку бітумну черепицю, яка ідеально підходить для
+                дахів складних форм.
+              </p>
+            </div>
+            <div class="why-item">
+              <img src="images/feedback_md.jpg" alt="" class="why-item__bg" />
+              <div class="why-item__num">07</div>
+              <h4 class="why-item__label heading">Відмінна шумоізоляція</h4>
+              <p class="why-item__description">
+                Поглинання шуму дощу та вітру, даруючи відчуття гармонії та
+                комфорту.
+              </p>
+            </div>
+          </div>
+          <div class="why-content-sm">
+            <div class="why-glider-sm">
+              <div class="why-item wide">
+                <div class="why-item__num">01</div>
+                <h4 class="why-item__label heading">Cambridge Xpress Lane</h4>
+                <p class="why-item__description">
+                  Велика область для кріплення цвяхами, яку називають “Cambridge
+                  Xpress Lane”, для надійного монтажу черепиці (особливо на
+                  дахах з великим кутом нахилу) та для більш простого і швидкого
+                  монтажу.
+                </p>
+              </div>
+              <div class="why-item wide">
+                <div class="why-item__num">01</div>
+                <h4 class="why-item__label heading">Cambridge Xpress Lane</h4>
+                <p class="why-item__description">
+                  Велика область для кріплення цвяхами, яку називають “Cambridge
+                  Xpress Lane”, для надійного монтажу черепиці (особливо на
+                  дахах з великим кутом нахилу) та для більш простого і швидкого
+                  монтажу.
+                </p>
+              </div>
+              <div class="why-item wide">
+                <div class="why-item__num">01</div>
+                <h4 class="why-item__label heading">Cambridge Xpress Lane</h4>
+                <p class="why-item__description">
+                  Велика область для кріплення цвяхами, яку називають “Cambridge
+                  Xpress Lane”, для надійного монтажу черепиці (особливо на
+                  дахах з великим кутом нахилу) та для більш простого і швидкого
+                  монтажу.
+                </p>
+              </div>
+            </div>
+            <div class="glider__arrows">
+              <div class="why-prev disabled" aria-disabled="true">
+                <img src="/images/arrow_left.svg" alt="" />
+              </div>
+              <div class="why-next" aria-disabled="false">
+                <img src="/images/arrow_right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="assortment">
+        <div class="anchor anchor-2" id="assortment"></div>
+        <div class="container">
+          <h3 class="decor">Асортимент</h3>
+          <div class="assortment-content">
+            <div class="assortment-list">
+              <div class="assortment-tab">All</div>
+              <div class="assortment-tab">Cambridge Xtreme 9.5</div>
+              <div class="assortment-tab active">Cambridge Xpress</div>
+              <div class="assortment-tab">Monarch-Diamant</div>
+              <div class="assortment-tab">Armour Shield Plus</div>
+              <div class="assortment-tab">Diamant Shield Plus</div>
+              <div class="assortment-tab">Armourglass Plus</div>
+              <div class="assortment-tab">Victorian Plus</div>
+              <div class="assortment-tab">Diamant Plus</div>
+              <div class="assortment-tab">Superglass</div>
+              <div class="assortment-tab">Superglass Biber</div>
+              <div class="assortment-tab">Superglass Hex</div>
+            </div>
+            <div class="assortment-items">
+              <div class="assortment-content-lg">
+                <div class="assortment-content-wrap active">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/card-1.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xtreme 9.5
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Cambridge Xpress
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Monarch-Diamant
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Armour Shield Plus
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Diamant Shield Plus
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Armourglass Plus
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Victorian Plus
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Diamant Plus
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Superglass
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Superglass Biber
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap">
+                  <div class="assortment-slide">
+                    <div class="card assortment-card">
+                      <img
+                        src="images/collections-2.jpg"
+                        alt="Cambridge Xtreme 9.5"
+                        class="card__img"
+                        loading="lazy"
+                      />
+                      <div class="card__content">
+                        <h4 class="card__title heading assortment-card__title">
+                          Superglass Hex
+                        </h4>
+                        <div class="assortment-card__info-wrap">
+                          <p class="assortment-card__info">
+                            <span>Форма нарізки:</span> Драконів зуб
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Тип бітума:</span> Окислений бітум
+                          </p>
+                          <p class="assortment-card__info">
+                            <span>Вага 1 м²:</span> 11.6
+                          </p>
+                          <p class="assortment-card__info">
+                            <span
+                              >Площа ефективного покриття однією упаковкою,
+                              м²</span
+                            >
+                            3.1
+                          </p>
+                        </div>
+                        <div class="assortment-card__actions">
+                          <div class="assortment-card__price">792 грн / м²</div>
+                          <button class="assortment-card__btn button">
+                            купити
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="assortment-content-md">
+                <div class="assortment-content-wrap-md active">
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="assortment-content-wrap-md">
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card assortment-card">
+                    <img
+                      src="images/card-1.jpg"
+                      alt="Cambridge Xtreme 9.5"
+                      class="card__img"
+                      loading="lazy"
+                    />
+                    <div class="card__content">
+                      <h4 class="card__title heading assortment-card__title">
+                        Cambridge Xtreme 9.5
+                      </h4>
+                      <div class="assortment-card__info-wrap">
+                        <p class="assortment-card__info">
+                          <span>Форма нарізки:</span> Драконів зуб
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Тип бітума:</span> Окислений бітум
+                        </p>
+                        <p class="assortment-card__info">
+                          <span>Вага 1 м²:</span> 11.6
+                        </p>
+                        <p class="assortment-card__info">
+                          <span
+                            >Площа ефективного покриття однією упаковкою,
+                            м²</span
+                          >
+                          3.1
+                        </p>
+                      </div>
+                      <div class="assortment-card__actions">
+                        <div class="assortment-card__price">792 грн / м²</div>
+                        <button class="assortment-card__btn button">
+                          купити
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="glider__arrows">
+              <div class="assortment-prev">
+                <img src="/images/arrow_left.svg" alt="" />
+              </div>
+              <div class="assortment-next">
+                <img src="/images/arrow_right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="feedback__info"></div>
+        <div class="container">
+          <div class="container-inner">
+            <form class="form">
+              <h3 class="form__title decor decor--gray">
+                Заповніть форму та отримайте
+                <i><span>безкоштовну</span> професійну консультацію</i> від
+                менеджера IKO!
+              </h3>
+              <div class="form__container">
+                <div class="input-wrapper">
+                  <img src="images/icon_user.svg" alt="" class="icon" />
+                  <input type="text" placeholder="Ім’я" />
+                </div>
+                <div class="input-wrapper">
+                  <img src="images/icon_phone.svg" alt="" class="icon" />
+                  <input type="text" placeholder="Контактний телефон" />
+                </div>
+                <div class="input-wrapper">
+                  <img src="images/icon_message.svg" alt="" class="icon" />
+                  <input type="text" placeholder="Ел. пошта" />
+                </div>
+                <button class="button">Надіслати</button>
+              </div>
+              <p class="form__subtext">
+                Надсилаючи форму на цьому веб-сайті, я розумію, що представники
+                IKO можуть зателефонувати мені, надіслати текстове повідомлення
+                чи надіслати мені лист електронною поштою, щоб надати мені
+                професійну консультацію, а також презентувати свої продукти та
+                послуги.
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="feedback__image"></div>
+      </section>
+
+      <section class="media">
+        <div class="anchor anchor-2" id="media"></div>
+        <div class="container">
+          <h3 class="doct__title decor">Медіатека</h3>
+          <div class="docs__content">
+            <div class="glider-container media-content-lg">
+              <div class="media-glider">
+                <div class="media-item">
+                  <div class="media-grid__main" data-video-id="s5B5zWnPF7o">
+                    <img
+                      src="https://img.youtube.com/vi/s5B5zWnPF7o/maxresdefault.jpg"
+                      class="media-item__img"
+                      alt=""
+                    />
+                    <div class="media-item__info">
+                      ІКО CAMBRIDGE XPRESS — НАДІЙНА ЛАМІНОВАНА ЧЕРЕПИЦЯ ДЛЯ
+                      ВАШОГО ДОМУ!
+                    </div>
+                  </div>
+                  <div class="media-grid__side">
+                    <div class="media-grid__item" data-video-id="2BbD4ydz__8">
+                      <img
+                        src="https://img.youtube.com/vi/2BbD4ydz__8/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Тести на водонепроникність термосистеми та бітумної
+                        черепиці IKO
+                      </div>
+                    </div>
+                    <div class="media-grid__item" data-video-id="LfTI30IBEho">
+                      <img
+                        src="https://img.youtube.com/vi/LfTI30IBEho/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Який покрівельний матеріал найтихіший? Тест на шумність
+                        дахів від ІКО
+                      </div>
+                    </div>
+                    <div class="media-grid__item" data-video-id="xInZnJcpoYQ">
+                      <img
+                        src="https://img.youtube.com/vi/xInZnJcpoYQ/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        IKO монтаж сота — Покрокова інструкція
+                      </div>
+                    </div>
+                    <div class="media-grid__item" data-video-id="hp6Lsm28-RQ">
+                      <img
+                        src="https://img.youtube.com/vi/hp6Lsm28-RQ/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Інструкція з монтажу бітумної черепиці IKO під кутом від
+                        5 градусів
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-item">
+                  <div class="media-grid__main" data-video-id="v-32l9NQK14">
+                    <img
+                      src="https://img.youtube.com/vi/v-32l9NQK14/maxresdefault.jpg"
+                      class="media-item__img"
+                      alt=""
+                    />
+                    <div class="media-item__info">
+                      Монтаж прямокутної бітумної черепиці IKO
+                    </div>
+                  </div>
+                  <div class="media-grid__side">
+                    <div class="media-grid__item" data-video-id="3bw1JDyHd3U">
+                      <img
+                        src="https://img.youtube.com/vi/3bw1JDyHd3U/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Монтаж бітумної черепиці IKO Cambridge Xtreme
+                      </div>
+                    </div>
+                    <div class="media-grid__item" data-video-id="f3yb9pW-9PY">
+                      <img
+                        src="https://img.youtube.com/vi/f3yb9pW-9PY/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Переваги бітумної черепиці IKO над керамічною черепицею
+                      </div>
+                    </div>
+                    <div class="media-grid__item" data-video-id="Q67rWQa5yLc">
+                      <img
+                        src="https://img.youtube.com/vi/Q67rWQa5yLc/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Чи витримає бітумна черепиця Cambridge Xtreme удари
+                        градом?
+                      </div>
+                    </div>
+                    <div class="media-grid__item" data-video-id="3shvl1OCEmU">
+                      <img
+                        src="https://img.youtube.com/vi/3shvl1OCEmU/hqdefault.jpg"
+                        class="media-item__img"
+                        alt=""
+                      />
+                      <div class="media-item__info">
+                        Випробування IKO Cambridge Extreme на стійкість до
+                        теплових навантажень
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="glider__arrows">
+                <div class="media-prev disabled" aria-disabled="true">
+                  <img src="/images/arrow_left.svg" alt="" />
+                </div>
+                <div class="media-next disabled" aria-disabled="true">
+                  <img src="/images/arrow_right.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="glider-container media-content-md">
+              <div class="media-glider-md">
+                <div class="media-item-sm" data-video-id="s5B5zWnPF7o">
+                  <img
+                    src="https://img.youtube.com/vi/s5B5zWnPF7o/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    ІКО CAMBRIDGE XPRESS — НАДІЙНА ЛАМІНОВАНА ЧЕРЕПИЦЯ ДЛЯ
+                    ВАШОГО ДОМУ!
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="2BbD4ydz__8">
+                  <img
+                    src="https://img.youtube.com/vi/2BbD4ydz__8/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Тести на водонепроникність термосистеми та бітумної черепиці
+                    IKO
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="LfTI30IBEho">
+                  <img
+                    src="https://img.youtube.com/vi/LfTI30IBEho/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Який покрівельний матеріал найтихіший? Тест на шумність
+                    дахів від ІКО
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="xInZnJcpoYQ">
+                  <img
+                    src="https://img.youtube.com/vi/xInZnJcpoYQ/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    IKO монтаж сота — Покрокова інструкція
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="hp6Lsm28-RQ">
+                  <img
+                    src="https://img.youtube.com/vi/hp6Lsm28-RQ/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Інструкція з монтажу бітумної черепиці IKO під кутом від 5
+                    градусів
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="v-32l9NQK14">
+                  <img
+                    src="https://img.youtube.com/vi/v-32l9NQK14/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Монтаж прямокутної бітумної черепиці IKO
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="3bw1JDyHd3U">
+                  <img
+                    src="https://img.youtube.com/vi/3bw1JDyHd3U/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Монтаж бітумної черепиці IKO Cambridge Xtreme
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="f3yb9pW-9PY">
+                  <img
+                    src="https://img.youtube.com/vi/f3yb9pW-9PY/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Переваги бітумної черепиці IKO над керамічною черепицею
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="Q67rWQa5yLc">
+                  <img
+                    src="https://img.youtube.com/vi/Q67rWQa5yLc/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Чи витримає бітумна черепиця Cambridge Xtreme удари градом?
+                  </div>
+                </div>
+                <div class="media-item-sm" data-video-id="3shvl1OCEmU">
+                  <img
+                    src="https://img.youtube.com/vi/3shvl1OCEmU/hqdefault.jpg"
+                    class="media-item__img"
+                    alt=""
+                  />
+                  <div class="media-item__info">
+                    Випробування IKO Cambridge Extreme на стійкість до теплових
+                    навантажень
+                  </div>
+                </div>
+              </div>
+              <div class="glider__arrows">
+                <div class="media-prev-md disabled" aria-disabled="true">
+                  <img src="/images/arrow_left.svg" alt="" />
+                </div>
+                <div class="media-next-md disabled" aria-disabled="true">
+                  <img src="/images/arrow_right.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="docs">
+        <div class="container">
+          <h3 class="doct__title decor">Технічна документація</h3>
+          <div class="docs__content">
+            <div class="glider-container">
+              <div class="doc-glider">
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_1.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">Інструкція №1 НЕХ</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/Інструкція-№1-НЕХ.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_2.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">Інструкція з монтажу ІКО</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/Інструкція-з-монтажу-ІКО.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_3.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">
+                    Інструкція з монтажу вентиляції
+                  </h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/Інструкція-з-монтажу-вентиляції.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_4.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Armourbase Eco</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourbase-Eco.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_5.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">
+                    IKOSHINGLES Armourbase Pro Plus
+                  </h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourbase-Pro-Plus.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_6.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Armourbase Pro</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourbase-Pro.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_7.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Armourbase Stick</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourbase-Stick.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_8.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">
+                    IKOSHINGLES Armourbase ThermoAD
+                  </h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourbase-ThermoAD.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_9.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Armourglass Plus</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourglass-Plus.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_10.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Armourshield Plus</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Armourshield-Plus.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_11.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Cambridge Xpress</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Cambridge-Xpress.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_12.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Cambridge Xtreme</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Cambridge-Xtreme.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_13.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES DiamantPlus</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-DiamantPlus.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_14.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">
+                    IKOSHINGLES Diamantshield Plus
+                  </h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Diamantshield-Plus.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_15.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Monarch Biber</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Monarch-Biber.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_16.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Monarch Diamant</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Monarch-Diamant.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_17.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Monarch</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Monarch.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_18.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Superglass 3T</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Superglass-3T.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_19.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Superglass Beaver</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Superglass-Beaver.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_20.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Superglass Hex</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Superglass-Hex.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_21.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">IKOSHINGLES Victorian Plus</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/IKOSHINGLES-Victorian-Plus.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="doc-item">
+                  <img
+                    src="images/doc_preview_22.jpg"
+                    alt=""
+                    class="doc-item__img"
+                    loading="lazy"
+                  />
+                  <h4 class="doc-item__label">Plastal технічний лист</h4>
+                  <div class="doc-item__link">
+                    <a
+                      href="files/Plastal_технічний-лист.pdf"
+                      class="button-gray"
+                      download
+                    >
+                      <span>завантажити</span>
+                      <img
+                        src="images/icon_download.svg"
+                        loading="lazy"
+                        alt="download"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glider__arrows">
+                <div class="doc-prev">
+                  <img src="/images/arrow_left.svg" alt="" />
+                </div>
+                <div class="doc-next">
+                  <img src="/images/arrow_right.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visualizer">
+        <div class="anchor anchor-2" id="visualizer"></div>
+        <div class="container">
+          <h3 class="decor">Візуалізатор</h3>
+          <div class="visualizer__content">
+            <div class="visualizer__content-left">
+              <img
+                src="images/roof-icon-2.png"
+                class="visualizer__icon"
+                alt=""
+              />
+              <div class="card visualizer__card">
+                <img
+                  src="images/card-1.jpg"
+                  alt="Cambridge Xpress"
+                  class="card__img"
+                  loading="lazy"
+                />
+                <img src="images/logo_iko-sm.png" class="card__img-sm" alt="" />
+                <div class="card__content">
+                  <h4 class="card__title heading">Cambridge Xpress</h4>
+                </div>
+              </div>
+              <div class="card visualizer__card visualizer__card--absolute">
+                <img
+                  src="images/card-1.jpg"
+                  alt="Cambridge Xpress"
+                  class="card__img"
+                  loading="lazy"
+                />
+                <img src="images/logo_iko-sm.png" class="card__img-sm" alt="" />
+                <div class="card__content">
+                  <h4 class="card__title heading">Cambridge Xpress</h4>
+                </div>
+              </div>
+              <h3 class="visualizer__title heading">
+                Візуалізатор даху: оберіть свій колір
+              </h3>
+              <p class="visualizer__description">
+                Візуалізатор покрівлі допоможе обрати оптимальний колір бітумної
+                черепиці відповідно до архітектури будинку та навколишнього
+                середовища.
+                <br />
+                <br />
+                Переглядайте варіанти оформлення даху у зручному форматі та
+                приймайте зважене рішення.
+              </p>
+              <button class="button">спробувати</button>
+            </div>
+            <img
+              src="images/visualizer-img.jpg"
+              class="visualizer__content-right"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="container">
+          <h3 class="decor">Галерея</h3>
+          <div class="roof-grid gallery-content">
+            <div class="gallery-item wide">
+              <img src="images/gallery-1.jpg" class="item__img" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="images/gallery-2.jpg" class="item__img" alt="" />
+            </div>
+            <div class="gallery-item empty"></div>
+            <div class="gallery-item">
+              <img src="images/gallery-3.jpg" class="item__img" alt="" />
+            </div>
+
+            <div class="gallery-item">
+              <img src="images/gallery-4.jpg" class="item__img" alt="" />
+            </div>
+            <div class="gallery-item empty"></div>
+            <div class="gallery-item empty"></div>
+            <div class="gallery-item">
+              <img src="images/gallery-5.jpg" class="item__img" alt="" />
+            </div>
+            <div class="gallery-item empty">
+              <img src="images/gallery-1.jpg" class="item__img" alt="" />
+            </div>
+
+            <div class="gallery-item wide gallery-form">
+              <img src="images/IKO_logo.png" alt="" />
+              <div>
+                <div class="gallery-form__title">
+                  допоможемо підібрати покрівлю, яка буде гармонійно
+                  поєднуватись із загальним виглядом вашого будинку
+                </div>
+                <button class="button gallery-form__button">
+                  Отримати консультацію
+                </button>
+              </div>
+            </div>
+            <div class="gallery-item wide">
+              <img src="images/gallery-6.jpg" class="item__img" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="images/gallery-7.jpg" class="item__img" alt="" />
+            </div>
+          </div>
+          <div class="gallery-content-sm">
+            <div class="gallery-glider-sm">
+              <img src="/images/gallery-1.jpg" class="gallery-item-sm" alt="" />
+              <img src="/images/gallery-1.jpg" class="gallery-item-sm" alt="" />
+              <img src="/images/gallery-1.jpg" class="gallery-item-sm" alt="" />
+            </div>
+            <div class="glider__arrows">
+              <div class="gallery-prev disabled" aria-disabled="true">
+                <img src="/images/arrow_left.svg" alt="" />
+              </div>
+              <div class="gallery-next" aria-disabled="false">
+                <img src="/images/arrow_right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <h3 class="decor">FAQ</h3>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">01</span>
+              <h4>Який відсоток осипання верхнього шару бітумної черепиці?</h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Норма осипання грануляту з поверхні бітумної черепиці
+                  регламентується Європейським стандартом EN 544. На сьогодні
+                  цей показник становить 2,5 грама на один метр поверхні
+                  матеріалу.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">02</span>
+              <h4>
+                Чи можна укладати бітумну черепицю на старий покрівельний
+                матеріал?
+              </h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Бітумну черепицю IKO Cambridge Xpress та Cambridge Xtreme 9,5°
+                  можна застосовувати для проектів реконструкції, але у випадку
+                  якщо стара покрівля рівна та суха. Однак краще повністю зняти
+                  старе покриття, щоб уникнути можливих проблем із вентиляцією
+                  та нерівностями.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">03</span>
+              <h4>Чи потрібен підкладковий килим під бітумну черепицю?</h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Так, підкладковий килим обов’язковий, особливо на схилах з
+                  кутом нахилу менше 18°. Він захищає дах від протікання у разі
+                  пошкодження покрівельного покриття та покращує довговічність
+                  всієї системи.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">04</span>
+              <h4>Які погодні умови найкращі для монтажу бітумної черепиці?</h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Оптимальна температура для укладання – від +5°С до +25°С. У
+                  холодну пору року черепицю слід зберігати в теплому приміщенні
+                  та прогрівати перед монтажем, щоб уникнути її ламкості.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">05</span>
+              <h4>Як правильно кріпити бітумну черепицю?</h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Листи черепиці прибивають оцинкованими цвяхами з широким
+                  капелюшком. Цвяхи забиваються строго горизонтально, на
+                  відстані 2-3 см від верхнього краю пелюсток, щоб забезпечити
+                  надійну фіксацію і запобігти протіканням.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">06</span>
+              <h4>
+                Чи потрібні вентиляційні елементи на даху з бітумною черепицею?
+              </h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Так, вентиляція покрівлі обов’язкова. Вона запобігає
+                  накопиченню конденсату, появі плісняви та перегріву покриття,
+                  що значно подовжує термін служби даху. Для цього встановлюють
+                  коникові аератори, софітні решітки або вентиляційні виходи.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">07</span>
+              <h4>Як правильно виконати монтаж бітумної черепиці на коник?</h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Для облаштування коника використовують нарізані смуги з
+                  рядової черепиці. Їх укладають з напуском, прибиваючи цвяхами
+                  з обох сторін. Для кращої вентиляції рекомендується
+                  встановлювати спеціальні конькові аератори.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="dropdown">
+            <div class="dropdown__header">
+              <span class="dropdawn__num">01</span>
+              <h4>Скільки часу займає монтаж бітумної черепиці?</h4>
+              <div class="dropdown__expand"></div>
+            </div>
+            <article>
+              <div class="dropdown__inner">
+                <p>
+                  Час монтажу залежить від площі даху та складності конструкції.
+                  В середньому на дах площею 100 м² професійні покрівельники
+                  витрачають 2-3 дні за умови сприятливих погодних умов.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="feedback__info"></div>
+        <div class="container">
+          <div class="container-inner">
+            <form class="form">
+              <h3 class="form__title decor decor--gray">
+                Заповніть форму та отримайте
+                <i><span>безкоштовну</span> професійну консультацію</i> від
+                менеджера IKO!
+              </h3>
+              <div class="form__container">
+                <div class="input-wrapper">
+                  <img src="images/icon_user.svg" alt="" class="icon" />
+                  <input type="text" placeholder="Ім’я" />
+                </div>
+                <div class="input-wrapper">
+                  <img src="images/icon_phone.svg" alt="" class="icon" />
+                  <input type="text" placeholder="Контактний телефон" />
+                </div>
+                <div class="input-wrapper">
+                  <img src="images/icon_message.svg" alt="" class="icon" />
+                  <input type="text" placeholder="Ел. пошта" />
+                </div>
+                <button class="button">Надіслати</button>
+              </div>
+              <p class="form__subtext">
+                Надсилаючи форму на цьому веб-сайті, я розумію, що представники
+                IKO можуть зателефонувати мені, надіслати текстове повідомлення
+                чи надіслати мені лист електронною поштою, щоб надати мені
+                професійну консультацію, а також презентувати свої продукти та
+                послуги.
+              </p>
+            </form>
+            <div class="card feedback__card">
+              <img
+                src="images/card-1.jpg"
+                alt="Cambridge Xpress"
+                class="card__img"
+                loading="lazy"
+              />
+              <img src="images/logo_iko-sm.png" class="card__img-sm" alt="" />
+              <div class="card__content">
+                <h4 class="card__title heading">Cambridge Xpress</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback__image"></div>
+      </section>
+
+      <section class="about-us">
+        <div class="container">
+          <div class="about-us__content">
+            <div class="about-us__left">
+              <p>
+                Бітумна покрівля IKO – канадська якість та довговічність вашого
+                даху.
+              </p>
+              <p>
+                Бітумна черепиця IKO — це сучасне покрівельне рішення
+                преміум-класу, що поєднує високу якість, естетику та перевірену
+                надійність. Вироблена в Канаді з дотриманням найвищих
+                стандартів, покрівля IKO вирізняється стійкістю до екстремальних
+                погодних умов, ультрафіолету та механічних навантажень.
+              </p>
+              <p>
+                Завдяки широкому вибору колекцій і кольорів, IKO дозволяє
+                реалізувати будь-яке архітектурне рішення — від класичних до
+                сучасних стилів. Бітумна черепиця має шарову структуру, що
+                забезпечує герметичність, шумоізоляцію та додаткову
+                теплоізоляцію даху.
+              </p>
+            </div>
+            <div class="about-us__right">
+              <p>
+                Завдяки широкому вибору колекцій і кольорів, IKO дозволяє
+                реалізувати будь-яке архітектурне рішення — від класичних до
+                сучасних стилів. Бітумна черепиця має шарову структуру, що
+                забезпечує герметичність, шумоізоляцію та додаткову
+                теплоізоляцію даху.
+              </p>
+              <p>Серед ключових переваг:</p>
+              <ul>
+                <li>
+                  тривалий термін експлуатації (до 50 років залежно від серії),
+                </li>
+                <li>простий і зручний монтаж,</li>
+                <li>енергоефективність,</li>
+              </ul>
+              <div class="button-gray about-us__read-more">
+                <span>Читати більше</span>
+                <img src="images/icon_plus.svg" alt="" />
+              </div>
+              <p class="about-us__more">
+                Окрім цього, покрівля IKO відзначається екологічністю та
+                безпечністю у використанні. Матеріали, з яких виготовляється
+                бітумна черепиця, відповідають сучасним стандартам якості та не
+                завдають шкоди довкіллю. Це робить IKO оптимальним вибором для
+                тих, хто цінує не лише довговічність і надійність, а й турботу
+                про навколишнє середовище.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <img src="images/IKO_logo_white.png" alt="" />
+              <p>Якість, перевірена десятиліттями</p>
+            </div>
+            <div class="footer__links">
+              <ul>
+                <li><a href="#" class="link">колекції</a></li>
+                <li><a href="#" class="link">Про IKO</a></li>
+                <li><a href="#" class="link">Чому IKO?</a></li>
+                <li><a href="#" class="link">Асортимент</a></li>
+                <li><a href="#" class="link">Калькулятор</a></li>
+                <li><a href="#" class="link">Медіатека</a></li>
+              </ul>
+              <ul>
+                <li><a href="#" class="link">Доставка і оплата</a></li>
+                <li><a href="#" class="link">Гарантія і повернення</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <p>Підтримка представника бренду в Україні</p>
+            <a href="#"
+              ><img src="images/icon_phone_white.svg" alt="" />
+              <span>+38 (000) 121-11-33</span></a
+            >
+            <a href="#"
+              ><img src="images/icon_message_white.svg" alt="" />
+              <span>support@iko.com</span></a
+            >
+          </div>
+        </div>
+        <div class="footer__policy">політика конфіденційності</div>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="modal">
+      <div class="container">
+        <div class="modal-content">
+          <img src="images/form-img.jpg" alt="" class="modal-content__img" />
+          <div class="modal-content__form">
+            <button class="modal-close" id="closeModal">
+              <img src="images/icon_x.svg" alt="" />
+            </button>
+            <h3>
+              Залиште заявку та отримайте
+              <i>безкоштовну професійну консультацію</i>
+              від менеджера IKO!
+            </h3>
+            <div class="form__container modal-form">
+              <div class="input-wrapper">
+                <img src="images/icon_user.svg" alt="" class="icon" />
+                <input type="text" placeholder="Ім’я" />
+              </div>
+              <div class="input-wrapper">
+                <img src="images/icon_phone.svg" alt="" class="icon" />
+                <input type="text" placeholder="Контактний телефон" />
+              </div>
+              <div class="input-wrapper">
+                <img src="images/icon_message.svg" alt="" class="icon" />
+                <input type="text" placeholder="Ел. пошта" />
+              </div>
+              <button class="button">Надіслати</button>
+            </div>
+            <p class="form__subtext">
+              Надсилаючи форму на цьому веб-сайті, я розумію, що представники
+              IKO можуть зателефонувати мені, надіслати текстове повідомлення чи
+              надіслати мені лист електронною поштою, щоб надати мені професійну
+              консультацію, а також презентувати свої продукти та послуги.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-close">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6L6 18"
+            stroke="#FFF"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M6 6L18 18"
+            stroke="#FFF"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <img src="" alt="" />
+    </div>
+
+    <div class="lightbox" id="video-lightbox">
+      <div class="lightbox-close">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6L6 18"
+            stroke="#FFF"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M6 6L18 18"
+            stroke="#FFF"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="lightbox-content">
+        <iframe
+          id="yt-frame"
+          src=""
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
