@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  src: url("./../fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Italic-VariableFont_wdth,wght.ttf")
+  src: url("./../fonts/Roboto-Italic-VariableFont_wdth,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: italic;
@@ -562,7 +562,7 @@ button.navbar__button {
 .hero {
   position: relative;
   padding-top: 150px;
-  background: url("../images/hero_lg.webp") no-repeat center center/cover;
+  background: url("./../images/hero_lg.webp") no-repeat center center/cover;
   margin-top: 157px;
   max-height: 861px;
 }
@@ -971,7 +971,7 @@ button.navbar__button {
 /* why section start */
 .why {
   padding-top: 144px;
-  background-image: url("../images/why-bg.jpg");
+  background-image: url("./../images/why-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1225,7 +1225,7 @@ button.navbar__button {
   width: 42%;
   flex-shrink: 0;
   align-self: stretch;
-  background: url("../images/feedback_lg.jpg") no-repeat center center/cover;
+  background: url("./../images/feedback_lg.jpg") no-repeat center center/cover;
 }
 
 .form {
@@ -2330,7 +2330,8 @@ footer {
     position: static;
     width: 100%;
     height: 450px;
-    background: url("../images/feedback_md.jpg") no-repeat center center / cover;
+    background: url("./../images/feedback_md.jpg") no-repeat center center /
+      cover;
   }
   .container-inner,
   .form {
@@ -2446,7 +2447,7 @@ footer {
   .hero {
     padding-top: 40px;
     max-height: 585px;
-    background-image: url("../images/hero_md.webp");
+    background-image: url("./../images/hero_md.webp");
   }
   .hero__card {
     margin-bottom: 5px;
@@ -2801,7 +2802,7 @@ footer {
 
   /* hero */
   .hero {
-    background-image: url("../images/hero_sm.webp");
+    background-image: url("./../images/hero_sm.webp");
     background-position: 0 0;
     min-height: 500px;
   }
