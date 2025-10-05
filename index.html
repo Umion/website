@@ -38,13 +38,16 @@
       rel="stylesheet"
       type="text/css"
       target="_blank"
-      href="./styles.css"
+      href=".css/styles.css"
     />
     <!-- CSS -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+      rel="preload"
+      href="./css/glider.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
     />
+    <noscript><link rel="stylesheet" href="./css/glider.min.css" /></noscript>
   </head>
   <body>
     <nav>
@@ -4545,7 +4548,7 @@
       </div>
     </div>
 
-    <script src="./glider.min.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="./js/glider.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>
