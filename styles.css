@@ -561,7 +561,7 @@ button.navbar__button {
 .hero {
   position: relative;
   padding-top: 150px;
-  background: url("images/hero_lg.jpg") no-repeat center center/cover;
+  background: url("images/hero_lg.webp") no-repeat center center/cover;
   margin-top: 157px;
   max-height: 861px;
 }
@@ -2445,7 +2445,7 @@ footer {
   .hero {
     padding-top: 40px;
     max-height: 585px;
-    background-image: url("images/hero_md.jpg");
+    background-image: url("images/hero_md.webp");
   }
   .hero__card {
     margin-bottom: 5px;
@@ -2800,7 +2800,7 @@ footer {
 
   /* hero */
   .hero {
-    background-image: url("images/hero_sm.jpg");
+    background-image: url("images/hero_sm.webp");
     background-position: 0 0;
     min-height: 500px;
   }
